@@ -1,0 +1,14 @@
+<div class="">
+  <div class="grid grid-cols-4 gap-4">
+    <% @news.each do |news| %>
+    <div class="bg-green-100">
+      <% if !news.urlToImage.blank? %>
+      <%= image_tag news.urlToImage %>
+      <% else %>
+      <%= image_tag 'notfound.png' %>
+      <% end %>
+      <%= link_to news.title, news.url, class: 'mx-3' %>
+    </div>
+    <% end %>
+  </div>
+</div>
