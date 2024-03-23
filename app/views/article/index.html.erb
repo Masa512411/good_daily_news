@@ -1,13 +1,16 @@
-<div class="">
-  <div class="grid grid-cols-4 gap-4">
+<div>
+  <div class="border-2 p-3 bg-gray-100 grid grid-cols-4 grid-rows-auto gap-5 ">
     <% @news.each do |news| %>
-    <div class="bg-green-100">
+    <div class="bg-green-100 shadow-md min-h-80 flex flex-col">
       <% if !news.urlToImage.blank? %>
-      <%= image_tag news.urlToImage %>
+      <%= image_tag news.urlToImage, size: "240x200",class: "w-full resize-y max-h-60 "%>
       <% else %>
-      <%= image_tag 'notfound.png' %>
+      <%= image_tag 'notfound.png', class: "w-full max-h-60" %>
       <% end %>
-      <%= link_to news.title, news.url, class: 'mx-3' %>
+      <%= link_to news.title, news.url, class: 'leading-tight text-ellipsis-2 overflow-y-hidden font-bold' %>
+      <div class="justify-self-end self-end text-sm mt-auto">
+        <%= news.publishedAt %>
+      </div>
     </div>
     <% end %>
   </div>
