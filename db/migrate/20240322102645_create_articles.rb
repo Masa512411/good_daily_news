@@ -7,7 +7,7 @@ class CreateArticles < ActiveRecord::Migration[7.1]
       t.text :description
       t.string :url
       t.string :published_at
-      t.string :datetime
+      t.string :datetime,:null => true
 
       t.timestamps
     end

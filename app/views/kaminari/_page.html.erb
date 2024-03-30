@@ -1,0 +1,13 @@
+<%# Link showing page number
+  - available local variables
+    page:          a page object for "this" page
+    url:           url to this page
+    current_page:  a page object for the currently displayed page
+    total_pages:   total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+-%>
+<span
+  class="page<%= ' current font-bold border-2 border-black' if page.current? %> border h-9 w-9 mx-2 flex justify-center items-center">
+  <%= link_to_unless page.current?, page, url, {remote: remote, rel: page.rel} %>
+</span>

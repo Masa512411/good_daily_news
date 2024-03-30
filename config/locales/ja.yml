@@ -1,0 +1,8 @@
+ja:
+  views:
+    pagination:
+      previous: ' < '
+      next: ' > '
+      first: ' << '
+      last: ' >> '
+      truncate: '...'

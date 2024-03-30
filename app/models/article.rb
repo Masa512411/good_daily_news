@@ -10,6 +10,7 @@
 #  published_at :string
 #  title        :string
 #  url          :string
+#  url_to_image :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #

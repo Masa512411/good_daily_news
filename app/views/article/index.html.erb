@@ -1,17 +1,23 @@
 <div>
-  <div class="border-2 p-3 bg-gray-100 grid grid-cols-4 grid-rows-auto gap-5 ">
-    <% @news.each do |news| %>
-    <div class="bg-green-100 shadow-md min-h-80 flex flex-col">
-      <% if !news.urlToImage.blank? %>
-      <%= image_tag news.urlToImage, size: "240x200",class: "w-full resize-y max-h-60 "%>
+  <div class="border-2 p-2 bg-gray-100 grid lg:grid-cols-4 sm:grid-cols-2 grid-rows-auto gap-5 ">
+    <% @articles.each do |article| %>
+    <div class="bg-green-100 m-2 shadow-md hover:shadow-none hover:border-2  min-h-80
+     flex flex-col max-h-80">
+      <%= link_to article.url do %>
+      <% if !article.url_to_image.blank? %>
+      <%= image_tag article.url_to_image,class: "w-full resize-y max-h-60 object-cover h-48"%>
       <% else %>
       <%= image_tag 'notfound.png', class: "w-full max-h-60" %>
       <% end %>
-      <%= link_to news.title, news.url, class: 'leading-tight text-ellipsis-2 overflow-y-hidden font-bold' %>
-      <div class="justify-self-end self-end text-sm mt-auto">
-        <%= news.publishedAt %>
+      <div class='leading-tight text-ellipsis-2 overflow-y-hidden font-bold'>
+        <%= article.title %>
+        <div class="flex justify-self-end self-end text-sm mt-auto">
+          <%= article.published_at %>
+        </div>
       </div>
+      <% end %>
     </div>
     <% end %>
   </div>
+  <%= paginate @articles %>
 </div>

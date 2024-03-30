@@ -36,6 +36,10 @@ gem "news-api"
 gem "dotenv-rails"
 
 gem 'font-awesome-sass'
+
+gem 'active_interaction'
+
+gem 'kaminari'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

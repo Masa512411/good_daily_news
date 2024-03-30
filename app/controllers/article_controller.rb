@@ -1,9 +1,8 @@
 class ArticleController < ApplicationController
   def index
-    require 'news-api'
-
-    news_api = News.new(ENV['NEWS_API_KEY'])
-    @news = news_api.get_top_headlines(country: :jp)
+    # FetchNewsService.new.call
+    # news = Article.order(published_at: :DESC)
+    @articles = Article.page(params[:page]).per(20).order('published_at DESC')
   end
 
   def show
