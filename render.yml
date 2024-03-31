@@ -17,5 +17,5 @@ services:
         fromDatabase:
           name: 'news_gfvm'
           property: connectionString
-      - key: <%= ['RAILS_MASTER_KEY'] %>
+      - key: <%= ENV['RAILS_MASTER_KEY'] %>
         sync: false
