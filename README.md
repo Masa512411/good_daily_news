@@ -21,6 +21,4 @@ Things you may want to cover:
 
 - Deployment instructions
 
-[Render にデプロイ](postgres://news_a0wc_user:m49WJaOQ5YB6HHUtb66mzIznsUpvSbtR@dpg-co4irhf79t8c73930aog-a.singapore-postgres.render.com/news_a0wc)
-
-- ...
+[Render にデプロイ](https://good-daily-news.onrender.com)
