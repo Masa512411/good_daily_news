@@ -1,7 +1,7 @@
 <div>
-  <div class="border-2 p-2 bg-gray-100 grid lg:grid-cols-4 sm:grid-cols-2 grid-rows-auto gap-5 ">
+  <div class="container border-2 p-2 bg-gray-100 grid lg:grid-cols-4 sm:grid-cols-2 grid-rows-auto gap-5 ">
     <% @articles.each do |article| %>
-    <div class="bg-green-100 m-2 shadow-md hover:shadow-none hover:border-2  min-h-80
+    <section class="h-auto w-auto bg-green-100 m-2 shadow-md hover:shadow-none hover:border-2  min-h-80
      flex flex-col max-h-80">
       <%= link_to article.url do %>
       <% if !article.url_to_image.blank? %>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <% end %>
-    </div>
+    </section>
     <% end %>
   </div>
   <%= paginate @articles %>
